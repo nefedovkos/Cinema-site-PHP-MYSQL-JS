@@ -1,0 +1,467 @@
+
+/* Begin site CSS  */
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    padding: 0;
+    margin: 0;
+
+}
+.containerOfAllSite{
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .7)), url(/css/img/bg.jpg);
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-size: cover !important;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    
+}
+.allSiteDiv{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+/* LOGO style */
+.loginDiv{
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 0, 0, .4);
+    width: 900px;
+    height: 0;
+}
+.logoDiv{
+    width: 900px;
+    height: 300px;
+    background: rgba(0, 0, 0, .4);
+    margin: 20px; 
+    display: flex;
+    flex-direction: row;
+    border-radius: 45px;
+}
+.pageMenu{
+    width: 900px;
+    height: 100px;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 45px;
+}
+.subPageMenu{
+    width: 900px;
+    height: 100px;
+    background-color: rgba(0, 0, 0, .4);
+    margin: 20px; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 45px;
+}
+
+.contentDiv{
+    width: 900px;
+    display: block;
+    min-height: 500px;
+    height: auto !important;
+    margin: 20px; 
+}
+.moviesAlign{
+    width: 900px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.footerDiv{
+    width: 900px !important;
+    height: 40px;
+    background: rgba(0, 0, 0, .4);
+    color: white;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.footer{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+
+}
+.footerLink{
+    text-decoration: none;
+}
+/*   INPUT FORM STYLE ADMIN PAGES */
+.form{
+
+    background: rgba(0,0,0,.7);
+    border-radius: 30px;
+}
+.form h1 {
+    margin: 30px 100px;
+    padding: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.form2{
+    background: rgba(0,0,0,.7);
+    border-radius: 30px;
+}
+.form2 h1 {
+    margin: 30px 100px;
+    padding: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.input-form {
+    margin: 15px 40px;
+    text-align: center;
+}
+
+.input-form input {
+    padding: 10px;
+    width: 100px;
+    color: #fff;
+    font-size: 20px;
+    background: none;
+    outline: none;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+}
+.input-form input[type="text"]:focus, .input-form input[type="password"]:focus, .input-form input[type="number"]:focus {
+    border: 1px solid #0fc3f5;
+}
+.input-form button[type="submit"] {
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 20px;
+    background: #0fc3f5;
+    transition: .3s;
+    height: 50px;
+    width: 100px;
+}
+
+.input-form button[type="submit"]:hover {
+    background: #4442db;
+    border-radius: 20px;
+}
+.input-form input[type="submit"] {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 20px;
+    background: #0fc3f5;
+    transition: .3s;
+    height: 50px;
+    width: 150px;
+}
+
+.input-form input[type="submit"]:hover {
+    background: #4442db;
+    border-radius: 20px;
+}
+/*  MAP SHOW STYLE ADMIN PAGES */
+
+.form{
+
+    background: rgba(0,0,0,.7);
+    border-radius: 30px;
+}
+.form h1 {
+    margin: 30px 100px;
+    padding: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.input-form {
+    margin: 15px 40px;
+    text-align: center;
+}
+
+.input-form input {
+    padding: 10px;
+    width: 100%;
+    color: #fff;
+    font-size: 20px;
+    background: none;
+    outline: none;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+}
+.input-form input[type="text"]:focus, .input-form input[type="password"]:focus, .input-form input[type="number"]:focus {
+    border: 1px solid #0fc3f5;
+}
+.input-form button[type="submit"] {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 20px;
+    background: #0fc3f5;
+    transition: .3s;
+    height: 50px;
+    width: 370px;
+}
+
+.input-form button[type="submit"]:hover {
+    background: #4442db;
+    border-radius: 20px;
+}
+.input-form input[type="submit"] {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 20px;
+    background: #0fc3f5;
+    transition: .3s;
+    height: 50px;
+    width: 370px;
+}
+.input-form input[type="submit"]:hover {
+    background: #4442db;
+    border-radius: 20px;
+}
+
+
+
+
+
+.form2{
+
+    border-radius: 30px;
+}
+.form2 h1 {
+    margin: 30px 100px;
+    padding: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.input-form2 {
+    margin: 5px;
+    text-align: center;
+}
+
+.input-form2 input {
+    padding: 10px;
+    width: 100px;
+    color: #fff;
+    font-size: 20px;
+    background: none;
+    outline: none;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+}
+.input-form2 input[type="text"]:focus, .input-form input[type="password"]:focus, .input-form input[type="number"]:focus {
+    border: 1px solid #6495ED;
+}
+.input-form2 button[type="submit"] {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 20px;
+    background: #6495ED;
+    transition: .3s;
+    height: 50px;
+    width: 150px;
+}
+
+
+
+.input-form2 button[type="submit"]:hover {
+    background: #232323;
+    border-radius: 20px;
+}
+.input-form2 input[type="submit"] {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 20px;
+    background: #6495ED;
+    transition: .3s;
+    height: 50px;
+    width: 370px;
+}
+.input-form2 input[type="submit"]:hover {
+    background: #232323;
+    border-radius: 20px;
+}
+
+/*  MAP SHOW STYLE ADMIN PAGES */
+
+.printContainer{
+    width: 900px;
+    min-height: 400px;
+    background: rgba(0, 0, 0, .7);
+    display: block;
+}
+
+.showGatesName{
+    width: 900px;
+    color: white;
+    text-shadow: 0 0 5px #03e9f4,
+                 0 0 25px #03e9f4,
+                 0 0 50px #03e9f4,
+                 0 0 200px #03e9f4;
+    filter: hue-rotate(50deg);
+    font-size: 34px;
+    text-align: center;
+}
+.showMovieName{
+    width: 900px;
+    color: white;
+    text-shadow: 0 0 5px #03e9f4,
+                 0 0 25px #03e9f4,
+                 0 0 50px #03e9f4,
+                 0 0 200px #03e9f4;
+    filter: hue-rotate(100deg);
+    font-size: 30px;
+    text-align: center;
+}
+.printMovieMap{
+    display: block;
+
+}
+.sectionNumber{
+    width: 900px;
+    color: white;
+    text-shadow: 0 0 5px #03e9f4,
+                 0 0 25px #03e9f4,
+                 0 0 50px #03e9f4,
+                 0 0 200px #03e9f4;
+    filter: hue-rotate(100deg);
+    font-size: 20px;
+    text-align: center;
+
+}
+.printView{
+    min-width: 100px;
+    min-height: 100px;
+    height: auto;
+    width: auto;
+    align-content: center;
+    align-items: center;
+}
+
+.printSquare{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #cc683c;
+    padding: 4px;
+}
+.printRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.printSquareRow{
+    width: 70px;
+    height: 30px;
+    text-shadow: 0 0 5px #03e9f4,
+    0 0 25px #03e9f4,
+    0 0 50px #03e9f4,
+    0 0 200px #03e9f4;
+    filter: hue-rotate(100deg);
+    color: white;
+    text-align: center;
+    border: 1px solid #cc683c;
+    padding: 4px;
+}
+.printSquareSeatNumber{
+
+    background-image: url('/css/img/chair_number.png');
+    width: 30px;
+    height: 30px;
+    text-shadow: 0 0 5px #03e9f4,
+                 0 0 25px #03e9f4,
+                 0 0 50px #03e9f4,
+                 0 0 200px #03e9f4;
+    filter: hue-rotate(100deg);
+    color: white;
+    text-align: center;
+    border: 1px solid #cc683c;
+    padding: 4px;
+}
+.chairNumber{
+    padding: 4px;
+    z-index: 1;
+}
+
+
+/*  Tickets STYLE  */
+.ticketPrint{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.ticketInfo{
+    background: url("../css/img/ticket.png");
+    background-size: cover;
+    width: 400px;
+    height: 201px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+
+
+}
+.printInfo{
+    padding-top: 10px;
+    font-size: 25px;
+    font-weight: 800;
+    color: black;
+    text-shadow: 0 0 5px #ffffff,
+    0 0 25px #ffffff,
+    0 0 50px #ffffff,
+    0 0 200px #ffffff;
+}
+.printFunction{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 900px;
+    height: auto !important;
+}

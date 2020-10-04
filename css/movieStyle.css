@@ -1,0 +1,167 @@
+
+.allMoviesList{
+    font-size: 40px;
+}
+.moviesAlign{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.movieContainer{
+    position: relative;
+    border-radius: 20px;
+    margin: 20px;
+}
+.movieContainer .movieCard{
+    position: relative;
+    width: 180px;
+    height: 250px;
+    background-color: #232323;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.movieContainer .movieCard:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: cornflowerblue;
+    border-radius: 20px;
+    transition: 0.5s ease-in-out;
+}
+.movieContainer .movieCard:hover:before{
+    clip-path: circle(200px at 80% -20%);
+}
+.movieContainer .movieCard:after{
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    font-size: 5em;
+    font-weight: 800;
+    color: rgba(255,255,255, 0.4);
+
+}
+.movieContainer .movieCard .movieImageBox{
+    position: absolute;
+    top: 40px;
+    left: 25px;
+    transform: translateY(-0.8%);
+    z-index: 10000;
+    width: 100%;
+    height: 220px;
+    transition: 0.5s;
+}
+.movieContainer .movieCard:hover .movieImageBox{
+    top: 0%;
+    transform: translateY(+2%);
+
+}
+.movieContainer .movieCard .movieImageBox img{
+    position: relative;
+    align-content: center;
+    width: 130px;
+    border-radius: 20px;
+    
+}
+.movieContainer .movieCard .contentBox{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: 1s;
+    z-index: 10;
+}
+.movieContainer .movieCard:hover .contentBox{
+    height: 300px;
+}
+.movieContainer .movieCard .contentBox h2{
+    position: relative;
+    align-content: center;
+    transform: translateY(10px);
+    font-size: 1em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fff;
+}
+.movieContainer .movieCard:hover .contentBox h2{
+    position: relative;
+    transform: translateY(200px);
+    font-weight: 600;
+    font-size: 0.1em;
+    letter-spacing: 0.1px;
+    color: #fff;
+}
+.movieContainer .movieCard .contentBox a{
+    display: inline-block;
+    position: relative;
+    align-content: center;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 4px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #111;
+    opacity: 0;
+    transform: translateY(650px);
+    transition: 0.5s;
+}
+.movieContainer .movieCard:hover .contentBox a{
+    opacity: 1;
+    transform: translateY(240px);
+    transition-delay: 0.5s;
+
+}
+
+.movieContainer .movieCard .contentBox .movieForm{
+    display: inline-block;
+    position: relative;
+    align-content: center;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    transform: translateY(550px);
+    transition: 0.5s;
+}
+.movieContainer .movieCard:hover .contentBox .movieForm{
+    opacity: 1;
+    transform: translateY(240px);
+    transition-delay: 0.5s;
+
+}
+/* movie show ORDER button */
+.inputMovieForm button[type="submit"] {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 15px;
+    border: none;
+    border-radius: 20px;
+    background: cornflowerblue;
+    transition: .3s;
+    height: 50px;
+    width: 120px;
+}
+
+.inputMovieForm button[type="submit"]:hover {
+    background: #4442db;
+    border-radius: 20px;
+}
+.moviesByGatesContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.moviesByGatesContainer h1{
+    width: 900px;
+    color: white !important;
+    text-shadow: 0 0 5px #03e9f4,
+    0 0 25px #03e9f4,
+    0 0 50px #03e9f4,
+    0 0 200px #03e9f4;
+    filter: hue-rotate(150deg);
+}
