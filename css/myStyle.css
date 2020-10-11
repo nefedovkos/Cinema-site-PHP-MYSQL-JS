@@ -26,60 +26,86 @@ body{
 }
 .allSiteDiv{
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 20% 30% 30% 20%;
+    grid-template-rows: auto;
+    grid-template-areas: "login comingSoon comingSoon empty1"
+                         "empty2 menu menu empty3"
+                         "empty4 content content empty5"
+                         "footer footer footer footer";
 }
 /* LOGO style */
 .loginDiv{
-    padding: 0;
-    margin: 0;
-    align-items: center;
+   /* background: rgba(0, 0, 0, .4);*/
+    grid-area: login;
+    min-width: 300px;
+
+}
+.loginDivFreeBox{
+    /* background: rgba(0, 0, 0, .4);*/
+    min-width: 300px;
+    min-height: 200px;
+
+}
+
+.logoDiv{
+
+    grid-area: comingSoon;
     display: flex;
     flex-direction: column;
-    background: rgba(0, 0, 0, .4);
-    width: 900px;
-    height: 0;
+    justify-content: center;
+    align-items: center;
+
 }
-.logoDiv{
-    width: 900px;
-    height: 300px;
-    background: rgba(0, 0, 0, .4);
-    margin: 20px; 
+.sliderComingSoon{
+    grid-area: comingSoon;
+    padding: 0;
+    margin: 0;
+    background: url(/css/img/comingSoon/pic1.jpg);
+    animation: slide 45s infinite;
+    float: left;
+    position: relative;
     display: flex;
-    flex-direction: row;
-    border-radius: 45px;
+    flex-direction: column;
 }
+@keyframes slide{
+    20%{
+        background: url(/css/img/comingSoon/pic2.jpg);
+    }
+    40%{
+        background: url(/css/img/comingSoon/pic3.jpg);
+    }
+    60%{
+        background: url(/css/img/comingSoon/pic4.jpg);
+    }
+    80%{
+        background: url(/css/img/comingSoon/pic5.jpg);
+    }
+    100%{
+        background: url(/css/img/comingSoon/pic1.jpg);
+    }
+}
+.comingSoonText{
+    grid-area: comingSoon;
+    top: 10px;
+    left:50%;
+
+}
+.logoTextForLogo{
+    text-align: center;
+
+}
+
 .pageMenu{
-    width: 900px;
-    height: 100px;
-    margin: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    border-radius: 45px;
-}
-.subPageMenu{
-    width: 900px;
-    height: 100px;
-    background-color: rgba(0, 0, 0, .4);
-    margin: 20px; 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    border-radius: 45px;
+    grid-area: menu;
 }
 
 .contentDiv{
-    width: 900px;
-    display: block;
-    min-height: 500px;
-    height: auto !important;
-    margin: 20px; 
+    grid-area: content;
 }
 .moviesAlign{
-    width: 900px;
+    max-width: 900px;
     height: auto;
     display: flex;
     flex-direction: row;
@@ -88,29 +114,26 @@ body{
 
 }
 .footerDiv{
-    width: 900px !important;
-    height: 40px;
-    background: rgba(0, 0, 0, .4);
-    color: white;
-    margin: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    grid-area: footer;
 }
 
 .footer{
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 25px;
     text-transform: uppercase;
-    margin-bottom: 35px;
+   /* margin-bottom: 35px;*/
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    color: white;
 
 }
 .footerLink{
     text-decoration: none;
+
 }
 /*   INPUT FORM STYLE ADMIN PAGES */
 .form{
-
     background: rgba(0,0,0,.7);
     border-radius: 30px;
 }
@@ -331,14 +354,10 @@ body{
 /*  MAP SHOW STYLE ADMIN PAGES */
 
 .printContainer{
-    width: 900px;
-    min-height: 400px;
-    background: rgba(0, 0, 0, .7);
     display: block;
 }
 
 .showGatesName{
-    width: 900px;
     color: white;
     text-shadow: 0 0 5px #03e9f4,
                  0 0 25px #03e9f4,
@@ -349,7 +368,6 @@ body{
     text-align: center;
 }
 .showMovieName{
-    width: 900px;
     color: white;
     text-shadow: 0 0 5px #03e9f4,
                  0 0 25px #03e9f4,
@@ -364,7 +382,6 @@ body{
 
 }
 .sectionNumber{
-    width: 900px;
     color: white;
     text-shadow: 0 0 5px #03e9f4,
                  0 0 25px #03e9f4,
@@ -409,8 +426,6 @@ body{
     padding: 4px;
 }
 .printSquareSeatNumber{
-
-    background-image: url('/css/img/chair_number.png');
     width: 30px;
     height: 30px;
     text-shadow: 0 0 5px #03e9f4,
@@ -465,3 +480,997 @@ body{
     width: 900px;
     height: auto !important;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 2000px){
+
+    .allSiteDiv{
+        display: grid;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+    }
+    .loginDiv{
+        /* background: rgba(0, 0, 0, .4);*/
+        grid-area: login;
+        min-width: 300px;
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+    }
+    .loginText{
+        min-width: 100%;
+    }
+    .arrow{
+        min-width: 100%;
+    }
+    .bannerButton{
+        min-width: 100%;
+    }
+    .containerSignUpForm{
+        margin-left: calc((100% - 218px)/2) ;
+    }
+    .logoDiv{
+        position: relative;
+        justify-items: center;
+    }
+    .sliderComingSoon{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 766px;
+        height: 255px;
+    }
+    .sliderComingSoon{
+        background: url(/css/img/comingSoon/766px/pic1.jpg);
+        animation: slide 45s infinite;
+        float: left;
+        position: relative;
+        justify-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    @keyframes slide{
+        20%{
+            background: url(/css/img/comingSoon/766px/pic2.jpg);
+        }
+        40%{
+            background: url(/css/img/comingSoon/766px/pic3.jpg);
+        }
+        60%{
+            background: url(/css/img/comingSoon/766px/pic4.jpg);
+        }
+        80%{
+            background: url(/css/img/comingSoon/766px/pic5.jpg);
+        }
+        100%{
+            background: url(/css/img/comingSoon/766px/pic1.jpg);
+        }
+    }
+    .logoTextForLogo{
+        position: absolute;
+        margin: 5px;
+        top: 0;
+        z-index: 2;
+        text-align: center;
+        color: white;
+        font-size: 25px;
+        display: flex;
+        flex-direction: column;
+    }
+    .form{
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        margin: 0 100px;
+    }
+    .pageMenu{
+        width: 100%;
+    }
+
+
+
+    .ticketInfo{
+        width: 240px;
+        height: 120px;
+        margin: 5px;
+        padding-top: 10px;
+        text-align: center;
+        font-size: 18px;
+
+    }
+    .printInfo{
+        padding-top: 5px;
+        font-size: 18px;
+
+    }
+    .printFunction{
+        width: auto;
+    }
+
+}
+
+@media screen and (max-width: 1199px){
+
+    .allSiteDiv{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        margin: 0 100px;
+    }
+    .loginDiv{
+        /* background: rgba(0, 0, 0, .4);*/
+        grid-area: login;
+        min-width: 300px;
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+    }
+    .loginText{
+        min-width: 100%;
+    }
+    .arrow{
+        min-width: 100%;
+    }
+    .bannerButton{
+        min-width: 100%;
+    }
+    .containerSignUpForm{
+        margin-left: calc((100% - 218px)/2) ;
+    }
+    .logoDiv{
+        position: relative;
+        justify-items: center;
+    }
+    .sliderComingSoon{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 766px;
+        height: 255px;
+        display: flex;
+        flex-direction: column;
+    }
+    .sliderComingSoon{
+        background: url(/css/img/comingSoon/766px/pic1.jpg);
+        animation: slide 45s infinite;
+        float: left;
+        position: relative;
+        justify-items: center;
+    }
+    @keyframes slide{
+        20%{
+            background: url(/css/img/comingSoon/766px/pic2.jpg);
+        }
+        40%{
+            background: url(/css/img/comingSoon/766px/pic3.jpg);
+        }
+        60%{
+            background: url(/css/img/comingSoon/766px/pic4.jpg);
+        }
+        80%{
+            background: url(/css/img/comingSoon/766px/pic5.jpg);
+        }
+        100%{
+            background: url(/css/img/comingSoon/766px/pic1.jpg);
+        }
+    }
+    .logoTextForLogo{
+        position: absolute;
+        margin: 5px;
+        top: 0;
+        z-index: 2;
+        text-align: center;
+        color: white;
+        font-size: 25px;
+        display: flex;
+        flex-direction: column;
+    }
+    .form{
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        margin: 0 100px;
+    }
+    .pageMenu{
+        width: 100%;
+    }
+    .contentDiv{
+        margin: 0 auto;
+    }
+
+
+
+    .ticketInfo{
+        width: 240px;
+        height: 120px;
+        margin: 5px;
+        padding-top: 10px;
+        text-align: center;
+        font-size: 18px;
+
+    }
+    .printInfo{
+        padding-top: 5px;
+        font-size: 18px;
+
+    }
+    .printFunction{
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 991px){
+
+    .allSiteDiv{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        margin: 0 100px;
+    }
+    .loginDiv{
+        /* background: rgba(0, 0, 0, .4);*/
+        grid-area: login;
+        min-width: 300px;
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+    }
+    .loginText{
+        min-width: 100%;
+    }
+    .arrow{
+        min-width: 100%;
+    }
+    .bannerButton{
+        min-width: 100%;
+    }
+    .containerSignUpForm{
+        margin-left: calc((100% - 218px)/2) ;
+    }
+    .logoDiv{
+        position: relative;
+        justify-items: center;
+    }
+    .sliderComingSoon{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 766px;
+        height: 255px;
+    }
+    .sliderComingSoon{
+        background: url(/css/img/comingSoon/766px/pic1.jpg);
+        animation: slide 45s infinite;
+        float: left;
+        position: relative;
+        justify-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    @keyframes slide{
+        20%{
+            background: url(/css/img/comingSoon/766px/pic2.jpg);
+        }
+        40%{
+            background: url(/css/img/comingSoon/766px/pic3.jpg);
+        }
+        60%{
+            background: url(/css/img/comingSoon/766px/pic4.jpg);
+        }
+        80%{
+            background: url(/css/img/comingSoon/766px/pic5.jpg);
+        }
+        100%{
+            background: url(/css/img/comingSoon/766px/pic1.jpg);
+        }
+    }
+    .logoTextForLogo{
+        position: absolute;
+        margin: 5px;
+        top: 0;
+        z-index: 2;
+        text-align: center;
+        color: white;
+        font-size: 25px;
+        display: flex;
+        flex-direction: column;
+    }
+    .form{
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        margin: 0 100px;
+    }
+    .pageMenu{
+        width: 100%;
+    }
+    .contentDiv{
+        margin: 0 auto;
+    }
+
+
+
+    .ticketInfo{
+        width: 240px;
+        height: 120px;
+        margin: 5px;
+        padding-top: 10px;
+        text-align: center;
+        font-size: 18px;
+
+    }
+    .printInfo{
+        padding-top: 5px;
+        font-size: 18px;
+
+    }
+    .printFunction{
+        width: auto;
+    }
+
+}
+
+@media screen and (max-width: 766px){
+
+    .allSiteDiv{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        margin: 0 100px;
+    }
+    .loginDiv{
+        /* background: rgba(0, 0, 0, .4);*/
+        grid-area: login;
+        min-width: 300px;
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+    }
+    .loginText{
+        min-width: 100%;
+    }
+    .arrow{
+        min-width: 100%;
+    }
+    .bannerButton{
+        min-width: 100%;
+    }
+    .containerSignUpForm{
+        margin-left: calc((100% - 218px)/2) ;
+    }
+    .logoDiv{
+        position: relative;
+        justify-items: center;
+    }
+    .sliderComingSoon{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 575px;
+        height: 191px;
+    }
+    .sliderComingSoon{
+        background: url(/css/img/comingSoon/575px/pic1.jpg);
+        animation: slide 45s infinite;
+        float: left;
+        position: relative;
+        justify-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    @keyframes slide{
+        20%{
+            background: url(/css/img/comingSoon/575px/pic2.jpg);
+        }
+        40%{
+            background: url(/css/img/comingSoon/575px/pic3.jpg);
+        }
+        60%{
+            background: url(/css/img/comingSoon/575px/pic4.jpg);
+        }
+        80%{
+            background: url(/css/img/comingSoon/575px/pic5.jpg);
+        }
+        100%{
+            background: url(/css/img/comingSoon/575px/pic1.jpg);
+        }
+    }
+    .logoTextForLogo{
+        position: absolute;
+        margin: 5px;
+        top: 0;
+        z-index: 2;
+        text-align: center;
+        color: white;
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    .form{
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        margin: 0 100px;
+    }
+    .pageMenu{
+        width: 100%;
+    }
+    .contentDiv{
+        margin: 0 auto;
+    }
+
+    .form{
+        margin: 0;
+        padding: 0;
+    }
+    .form h1 {
+        font-size: 15px;
+    }
+    .form2{
+        margin: 0;
+        padding: 0;
+    }
+    .form2 h1 {
+        font-size: 15px;
+    }
+    .input-form {
+        text-align: center;
+    }
+
+    .input-form input {
+        font-size: 20px;
+
+    }
+    .input-form input[type="text"]:focus, .input-form input[type="password"]:focus, .input-form input[type="number"]:focus {
+        border: 1px solid #0fc3f5;
+    }
+    .input-form button[type="submit"] {
+        transition: .3s;
+    }
+
+    .input-form button[type="submit"]:hover {
+
+    }
+    .input-form input[type="submit"] {
+
+    }
+
+    .input-form input[type="submit"]:hover {
+
+    }
+
+
+
+    .printFunction{
+        width: auto;
+    }
+
+    .ticketInfo{
+        width: 240px;
+        height: 120px;
+        margin: 5px;
+        padding-top: 10px;
+        text-align: center;
+        font-size: 18px;
+
+    }
+    .printInfo{
+        padding-top: 5px;
+        font-size: 18px;
+
+    }
+    .printFunction{
+        width: auto;
+    }
+
+}
+
+@media screen and (max-width: 575px){
+
+    .allSiteDiv{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+    }
+    .loginDiv{
+        /* background: rgba(0, 0, 0, .4);*/
+        grid-area: login;
+        min-width: 300px;
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+    }
+    .loginText{
+        min-width: 100%;
+    }
+    .arrow{
+        min-width: 100%;
+    }
+    .bannerButton{
+        min-width: 100%;
+    }
+    .containerSignUpForm{
+        margin-left: calc((100% - 218px)/2) ;
+    }
+    .logoDiv{
+        position: relative;
+        justify-items: center;
+    }
+    .sliderComingSoon{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 300px;
+        height: 100px;
+    }
+    .sliderComingSoon{
+        float: left;
+        position: relative;
+        justify-items: center;
+        background: url(/css/img/comingSoon/300px/pic1.jpg);
+        animation: slide 45s infinite;
+        display: flex;
+        flex-direction: column;
+
+    }
+    @keyframes slide{
+        20%{
+            background: url(/css/img/comingSoon/300px/pic2.jpg);
+        }
+        40%{
+            background: url(/css/img/comingSoon/300px/pic3.jpg);
+        }
+        60%{
+            background: url(/css/img/comingSoon/300px/pic4.jpg);
+        }
+        80%{
+            background: url(/css/img/comingSoon/300px/pic5.jpg);
+        }
+        100%{
+            background: url(/css/img/comingSoon/300px/pic1.jpg);
+        }
+    }
+    .logoTextForLogo{
+        position: absolute;
+        top: 0;
+        z-index: 2;
+        text-align: center;
+        color: white;
+        font-size: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    .showGatesName h1{
+        font-size: 35px;
+    }
+    .form{
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+
+    }
+    .contentDiv{
+        margin: 0 auto;
+    }
+
+
+
+
+
+    .form{
+        margin: 0;
+        padding: 0;
+        width: 300px;
+        margin: 10px;
+    }
+    .form h1 {
+        font-size: 15px;
+        margin: 5px 0;
+        padding: 5px 0;
+        text-align: center;
+    }
+    .form2{
+        margin: 0;
+        padding: 0;
+        width: 300px;
+        margin: 10px;
+    }
+    .form2 h1 {
+        font-size: 15px;
+        margin: 5px 0;
+        padding: 5px 0;
+        text-align: center;
+    }
+    .input-form {
+        margin: 5px 0;
+        padding: 5px 0;
+        text-align: center;
+    }
+
+    .input-form input {
+        font-size: 20px;
+        margin: 5px 0;
+        padding: 5px 0;
+        text-align: center;
+
+    }
+    .input-form input[type="text"]:focus, .input-form input[type="password"]:focus, .input-form input[type="number"]:focus {
+        height: 50px;
+        width: 120px;
+    }
+    .input-form button[type="submit"] {
+
+        height: 50px;
+        width: 120px;
+    }
+
+    .input-form button[type="submit"]:hover {
+        height: 50px;
+        width: 120px;
+    }
+    .input-form input[type="submit"] {
+        height: 50px;
+        width: 120px;
+    }
+
+    .input-form input[type="submit"]:hover {
+        height: 50px;
+        width: 120px;
+    }
+
+
+    .showGatesName{
+
+        font-size: 25px;
+    }
+    .showMovieName{
+
+        font-size: 20px;
+    }
+    .sectionNumber{
+        font-size: 10px;
+        text-align: center;
+
+    }
+    .printView{
+        min-width: 50px;
+        min-height: 50px;
+        height: auto;
+        width: auto;
+        align-content: center;
+        align-items: center;
+    }
+
+    .printSquare{
+        width: 15px;
+        height: 15px;
+        padding: 2px;
+    }
+    .printSquare img{
+        width: 15px;
+        height: 15px;
+    }
+
+    .printSquareRow{
+        width: 35px;
+        height: 15px;
+        padding: 1px;
+        font-size: 8px;
+    }
+    .printSquareSeatNumber{
+        width: 15px;
+        height: 15px;
+        padding: 2px;
+    }
+    .chairNumber{
+        font-size: 8px;
+        padding: 1px;
+        z-index: 1;
+    }
+
+
+
+    .ticketInfo{
+        width: 240px;
+        height: 120px;
+        margin: 5px;
+        padding-top: 10px;
+        text-align: center;
+        font-size: 18px;
+
+    }
+    .printInfo{
+        padding-top: 5px;
+        font-size: 18px;
+
+    }
+    .printFunction{
+        width: auto;
+    }
+
+
+
+}
+
+@media screen and (max-width: 300px){
+
+    .allSiteDiv{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+    }
+    .loginDiv{
+        /* background: rgba(0, 0, 0, .4);*/
+        grid-area: login;
+        min-width: 300px;
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+    }
+    .loginText{
+        min-width: 100%;
+    }
+    .arrow{
+        min-width: 100%;
+    }
+    .bannerButton{
+        min-width: 100%;
+    }
+    .containerSignUpForm{
+        margin-left: calc((100% - 218px)/2) ;
+    }
+    .logoDiv{
+        position: relative;
+        justify-items: center;
+    }
+    .sliderComingSoon{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 300px;
+        height: 100px;
+    }
+    .sliderComingSoon{
+        float: left;
+        position: relative;
+        justify-items: center;
+        background: url(/css/img/comingSoon/300px/pic1.jpg);
+        animation: slide 45s infinite;
+        display: flex;
+        flex-direction: column;
+
+    }
+    @keyframes slide{
+        20%{
+            background: url(/css/img/comingSoon/300px/pic2.jpg);
+        }
+        40%{
+            background: url(/css/img/comingSoon/300px/pic3.jpg);
+        }
+        60%{
+            background: url(/css/img/comingSoon/300px/pic4.jpg);
+        }
+        80%{
+            background: url(/css/img/comingSoon/300px/pic5.jpg);
+        }
+        100%{
+            background: url(/css/img/comingSoon/300px/pic1.jpg);
+        }
+    }
+    .logoTextForLogo{
+        position: absolute;
+        top: 0;
+        z-index: 2;
+        text-align: center;
+        color: white;
+        font-size: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .printContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .showMovieName{
+        width: 100%;
+        align-items: center;
+    }
+
+    .showGatesName h1{
+        font-size: 25px;
+    }
+    .form{
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+    }
+    .contentDiv{
+        margin: 0 auto;
+    }
+
+
+
+
+
+
+    .form{
+        margin: 0;
+        padding: 0;
+        width: 300px;
+        margin: 10px;
+    }
+    .form h1 {
+        font-size: 15px;
+        margin: 5px 0;
+        padding: 5px 0;
+        text-align: center;
+    }
+    .form2{
+        margin: 0;
+        padding: 0;
+        width: 300px;
+        margin: 10px;
+    }
+    .form2 h1 {
+        font-size: 15px;
+        margin: 5px 0;
+        padding: 5px 0;
+        text-align: center;
+    }
+    .input-form {
+        margin: 5px 0;
+        padding: 5px 0;
+        text-align: center;
+    }
+
+    .input-form input {
+        font-size: 20px;
+        margin: 5px 0;
+        padding: 5px 0;
+        text-align: center;
+
+    }
+    .input-form input[type="text"]:focus, .input-form input[type="password"]:focus, .input-form input[type="number"]:focus {
+        height: 50px;
+        width: 120px;
+    }
+    .input-form button[type="submit"] {
+
+        height: 50px;
+        width: 120px;
+    }
+
+    .input-form button[type="submit"]:hover {
+        height: 50px;
+        width: 120px;
+    }
+    .input-form input[type="submit"] {
+        height: 50px;
+        width: 120px;
+    }
+
+    .input-form input[type="submit"]:hover {
+        height: 50px;
+        width: 120px;
+    }
+
+
+
+
+
+
+
+
+
+    .showGatesName{
+
+        font-size: 25px;
+    }
+    .showMovieName{
+
+        font-size: 20px;
+    }
+    .sectionNumber{
+        font-size: 10px;
+        text-align: center;
+
+    }
+    .printView{
+        min-width: 50px;
+        min-height: 50px;
+        height: auto;
+        width: auto;
+        align-content: center;
+        align-items: center;
+    }
+
+    .printSquare{
+        width: 15px;
+        height: 15px;
+        padding: 2px;
+    }
+    .printSquare img{
+        width: 15px;
+        height: 15px;
+    }
+
+    .printSquareRow{
+        width: 35px;
+        height: 15px;
+        padding: 1px;
+        font-size: 8px;
+    }
+    .printSquareSeatNumber{
+        width: 15px;
+        height: 15px;
+        padding: 2px;
+    }
+    .chairNumber{
+        font-size: 8px;
+        padding: 1px;
+        z-index: 1;
+    }
+
+
+
+
+    .ticketInfo{
+        width: 240px;
+        height: 120px;
+        margin: 5px;
+        padding-top: 10px;
+        text-align: center;
+        font-size: 18px;
+
+    }
+    .printInfo{
+        padding-top: 5px;
+        font-size: 18px;
+
+    }
+    .printFunction{
+        width: auto;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

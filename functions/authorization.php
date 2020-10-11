@@ -12,7 +12,7 @@ if ($login == $user['login'] and $password == $user['password']) {
     $_SESSION['user'] = $user['login'];
     $_SESSION['name'] = $user['name'];
 } else {
-    $_SESSION['msg'] = "Wrong authorization!!! Try again. ";
+    $_SESSION['msg'] = "Wrong authorization!!!";
 }
 
 ?>

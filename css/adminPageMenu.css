@@ -1,8 +1,8 @@
 
 .menuButtons{
-    width: 900px !important;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
     flex-direction: row;
 }
@@ -11,7 +11,7 @@
     position: relative;
     display: inline-block;
     padding: 15px 20px;
-    margin: 40px 30px;
+    margin: 10px;
     color: #03e9f4;
     font-size: 15px;
     text-decoration: none;

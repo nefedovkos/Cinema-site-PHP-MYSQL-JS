@@ -1,25 +1,14 @@
 
 .banner {
     color: #fff;
-    width: 400px;
-    position: absolute;
-    top: 180px;
-    left: 150px;
-    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 .loginMessage{
     font-family: 'Roboto Condensed', sans-serif;
-    font-size: 16px;
-    background-color: white;
-    width: 257px;
-    position: absolute;
-    top: 20px;
-    left: 150px;
-    transform: translate(-50%, -50%);
     color: red;
     display: flex;
     flex-direction: column;
@@ -28,45 +17,25 @@
 }
 .logoTextForLogo{
     font-family: 'Roboto Condensed', sans-serif;
-    font-size: 16px;
-    background-color: white;
-    width: 900px;
-    position: absolute;
-    top: 50px;
-    left: 28%;
-    transform: translateY(+50px);
-    color: red;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
+    color: white;
 }
 .loginText {
     font-family: 'Roboto Condensed', sans-serif;
-    font-size: 30px;
-    top: 20px;
-    left: 250px;
     text-transform: uppercase;
-    margin-bottom: 35px;
     border-top: 7px solid #fff;
     border-bottom: 7px solid #fff;
 }
 .loginTextAdmin {
     font-family: 'Roboto Condensed', sans-serif;
-    font-size: 35px;
     text-transform: uppercase;
-    margin-bottom: 35px;
     border-top: 7px solid #fff;
     border-bottom: 7px solid #fff;
 }
 .loginTextWrong{
     font-family: 'Roboto Condensed', sans-serif;
-    font-size: 10px;
     text-transform: uppercase;
     text-align: center;
     color: red;
-    margin-bottom: 35px;
     border-top: 7px solid #fff;
     border-bottom: 7px solid #fff;
 }
@@ -85,11 +54,10 @@
 
 .arrow {
     font-size: 70px;
-    margin-bottom: 30px;
     animation: anim 3s infinite;
 }
 .bannerButton {
-    width: 200px;
+    width: 150px;
     padding: 15px;
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 17px;
@@ -138,15 +106,15 @@
     }
 
     40% {
-        transform: translateY(-30px)
-    }
-
-    50% {
         transform: translateY(0)
     }
 
-    60% {
+    50% {
         transform: translateY(-15px)
+    }
+
+    60% {
+        transform: translateY(0)
     }
 
     80% {
@@ -158,12 +126,10 @@
     }
 }
 
-
-
 .formContainer {
     display: flex;
-    width: 400px;
-    height: 600px;
+    width: 300px;
+    height: 500px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -171,24 +137,15 @@
     transform: translate(-50%, -50%);
     display: none;
     transition: opacity 1s;
-
-
-
-    /*
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 1s;
-    */
 }
 .signUpForm {
-    width: 100%;
-
+    width: 80%;
     padding: 120px 50px;
     box-sizing: border-box;
 }
 
 .formInput {
-    width: 300px;
+    width: 120%;
     font-family: 'Oswald', sans-serif;
     font-size: 18px;
     letter-spacing: 1px;
@@ -231,4 +188,136 @@
     font-weight: bold;
     color: #ffffff;
     cursor: pointer;
+}
+
+
+
+
+
+
+@media screen and (max-width: 2000px){
+    .loginMessage{
+        font-size: 35px;
+        text-align: center;
+    }
+    .loginText {
+        font-size: 20px;
+    }
+    .loginTextAdmin {
+
+    }
+    .loginTextWrong{
+
+    }
+
+
+
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1199px){
+    .loginMessage{
+        font-size: 35px;
+        text-align: center;
+    }
+    .loginText {
+        font-size: 20px;
+    }
+    .loginTextAdmin {
+
+    }
+    .loginTextWrong{
+
+    }
+
+
+
+}
+
+
+
+
+@media screen and (max-width: 991px){
+
+    .loginMessage{
+        font-size: 35px;
+        text-align: center;
+    }
+    .loginText {
+        font-size: 20px;
+    }
+    .loginTextAdmin {
+
+    }
+    .loginTextWrong{
+
+    }
+
+
+}
+
+
+@media screen and (max-width: 766px){
+    .loginMessage{
+        font-size: 35px;
+        text-align: center;
+    }
+    .loginText {
+        font-size: 20px;
+    }
+    .loginTextAdmin {
+
+    }
+    .loginTextWrong{
+
+    }
+
+
+
+}
+
+
+
+@media screen and (max-width: 575px){
+    .loginMessage{
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .loginText {
+        font-size: 20px;
+    }
+    .loginTextAdmin {
+
+    }
+    .loginTextWrong{
+
+    }
+
+
+}
+
+
+
+
+@media screen and (max-width: 300px) {
+    .loginMessage{
+        font-size: 20px;
+        text-align: center;
+    }
+    .loginText {
+        font-size: 20px;
+    }
+    .loginTextAdmin {
+
+    }
+    .loginTextWrong{
+
+    }
 }

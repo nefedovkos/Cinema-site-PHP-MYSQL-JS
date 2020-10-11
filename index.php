@@ -14,11 +14,11 @@ $tempMoviesToShow=[];
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/myStyle.css" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="css/img/Cinema-icon.png" type="image/png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500|Roboto+Condensed:300,300i,400,400i,700,700i" rel="stylesheet">
     <link rel="stylesheet" href="/css/signUP.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="/css/comingSoon.css" type="text/css" media="all" />
     <link rel="stylesheet" href="/css/movieStyle.css" type="text/css" media="all" />
     <link rel="stylesheet" href="/css/indexPageMenu.css" type="text/css" media="all" />
     <title>Cinema</title>
@@ -26,23 +26,19 @@ $tempMoviesToShow=[];
 
 <body>
 
+
+
+
+
     <div class="containerOfAllSite">
         <div class="allSiteDiv">
+
             <div class="loginDiv">
-                <div class="logoTextForLogo" style="position: absolute; top:5px; left: 26%; background: none; color: white !important;
-                text-shadow: 0 0 5px black,
-                             0 0 25px black,
-                             0 0 100px black,
-                             0 0 200px black; font-size: 30px">
-                    <h1 class="comingSoon">COMING SOON</h1>
-                    <h3>ON</h3>
-                    <h1 class="logoHyperactive">HYPERACTIVE CINEMA</h1>
-                    <h3>BEST MOVIE FOR BEST PEOPLE</h3>
-                </div>
-                <?php
-                if (!$_SESSION['user']) {
-                ?>
                     <div class="containerSignUpForm">
+                        <?php
+                        if (!$_SESSION['user']) {
+                        ?>
+
                         <div class="banner">
                             <h1 class="loginText">Press for login</h1>
                             <div class="arrow">
@@ -59,10 +55,17 @@ $tempMoviesToShow=[];
                             <div class="x-button"> &#10006; </div>
                         </div>
                         <script src="/js/signUp.js"></script>
+
+
+                            <?php
+                        }
+                        ?>
+
+
+
+
                     </div>
-                <?php
-                }
-                ?>
+
 
                 <div class="loginMessage">
                     <?php
@@ -95,10 +98,35 @@ $tempMoviesToShow=[];
                     }
                     ?>
                 </div>
+
             </div>
+
+
+
+
+
         <div class="logoDiv">
                 <div class="sliderComingSoon"></div>
+            <div class="logoTextForLogo" style="
+                text-shadow: 0 0 5px black,
+                             0 0 25px black,
+                             0 0 100px black,
+                             0 0 200px black;">
+                <h1 class="comingSoon">COMING SOON</h1>
+                <h3>ON</h3>
+                <h1 class="logoHyperactive">HYPERACTIVE CINEMA</h1>
+                <h3>BEST MOVIE FOR BEST PEOPLE</h3>
+            </div>
         </div>
+
+
+
+
+
+
+
+
+
         <div class="pageMenu">
                 <div class="menuButtons">
                     <a href="index.php" class="indexPageMenu">
@@ -130,6 +158,8 @@ $tempMoviesToShow=[];
                 ?>
                 </div>
             </div>
+
+
 
 
 
